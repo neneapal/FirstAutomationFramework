@@ -71,13 +71,13 @@ public class PracticeFormPage extends BasePage {
     public void fillPracticeForm(String firstName,String lastName, String emailAddress,String mobile,
                                  String subjects, String address, String state, String city){
         fillFirstName(firstName);
-        fillLastName(lastName);
-        fillEmailAddress(emailAddress);
+//        fillLastName(lastName);
+//        fillEmailAddress(emailAddress);
         selectGender();
-        fillPhoneNumber(mobile);
+//        fillPhoneNumber(mobile);
         fillSubjectsInput(subjects);
-        fillHobbies();
-        fillAddress(address);
+//        fillHobbies();
+//        fillAddress(address);
         fillState(state);
         fillCity(city);
     }
@@ -132,11 +132,13 @@ public class PracticeFormPage extends BasePage {
         elementMethods.fillElement(selectState, stateValue, Keys.ENTER);
     }
 
-//    public void fillCity(String cityValue){
+    public void fillCity(String cityValue){
+        elementMethods.clickElement(city);
+        elementMethods.fillElement(selectCity, cityValue, Keys.ENTER);
 //        city.click();
 //        selectCity.sendKeys(cityValue);
 //        selectCity.sendKeys(Keys.ENTER);
-//    }
+    }
 
     public void fillSubmit(){
        elementMethods.clickJsElement(submitButton);
